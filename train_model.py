@@ -94,7 +94,7 @@ def plot_cm(cm, target_name, title="Confusion Matrix", cmap=None, normalize=True
     plt.tight_layout()
     plt.ylabel('True Label')
     plt.xlabel('Predicted Label\naccuracy={:0.4f}; misclass={:0.4f}'.format(accuracy, misclass))
-    plt.savefig(r'C:\Users\AnjiRasakonda\vscode project\My Python\PROJECT\CICD\code-2- cicd\code-2\ConfusionMatrix.png', dpi=120)
+    plt.savefig('ConfusionMatrix.png', dpi=120)
     plt.show()
 
 target_name = np.array(['setosa', 'versicolor', 'virginica'])
@@ -118,10 +118,10 @@ plt.tight_layout()  # Make sure layout is adjusted
 plt.show()  # This ensures the plot will be shown on the screen
 
 # Save the feature importance plot as a PNG image
-plt.savefig(r'C:\Users\AnjiRasakonda\vscode project\My Python\PROJECT\CICD\code-2- cicd\code-2\FeatureImportance.png')
+plt.savefig('FeatureImportance.png')
 
 # Saving Scores to a File
-with open(r'C:\Users\AnjiRasakonda\vscode project\My Python\PROJECT\CICD\code-2- cicd\code-2\scores.txt', "w") as score:
+with open('scores.txt', "w") as score:
     score.write("Random Forest Train Var: %2.1f%%\n" % train_acc_rf)
     score.write("Random Forest Test Var: %2.1f%%\n" % test_acc_rf)
     score.write("F1 Score: %2.1f%%\n" % f1_rf)
@@ -135,4 +135,5 @@ with open(r'C:\Users\AnjiRasakonda\vscode project\My Python\PROJECT\CICD\code-2-
     score.write("F1 Score: %2.1f%%\n" % f1_lr)
     score.write("Recall Score: %2.1f%%\n" % recall_lr)
     score.write("Precision Score: %2.1f%%\n" % prec_lr)
+
 
